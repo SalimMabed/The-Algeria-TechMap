@@ -86,13 +86,19 @@ function App() {
             starter dataset is replaced with verified real entries.
             z-[800]: below the add-button container, whose subtree also
             renders the submission modal. */}
-        <div className="pointer-events-none absolute bottom-6 left-4 z-[800]">
+        <div className="pointer-events-none absolute bottom-6 left-4 z-[800] flex items-center gap-2">
           <div className="pointer-events-auto flex items-center gap-2 rounded-full border border-black/5 bg-white/85 px-3 py-1.5 shadow-sm backdrop-blur-md">
             <span className="h-2 w-2 rounded-full bg-amber-400" />
             <span className="text-[11px] font-medium text-neutral-600">
               Beta — most entries are illustrative demo data, help us replace them with real ones
             </span>
           </div>
+          <a
+            href="/directory.html"
+            className="pointer-events-auto rounded-full border border-black/5 bg-white/85 px-3 py-1.5 text-[11px] font-medium text-neutral-600 shadow-sm backdrop-blur-md transition hover:text-neutral-900"
+          >
+            List view ↗
+          </a>
         </div>
       </div>
 

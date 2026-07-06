@@ -4,32 +4,73 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://the-algeria-tech-map.vercel.app/" />
     <meta
       name="description"
-      content="The Algeria TechMap — a live map of Algeria's tech ecosystem: startups, companies, incubators, coworking spaces, events and hosting providers."
+      content="The Algeria TechMap — an interactive map of Algeria's tech ecosystem: startups, companies, freelancers, incubators, coworking spaces, events and hosting providers, by city, wilaya and sector."
+    />
+    <meta
+      name="keywords"
+      content="Algeria tech, Algerian startups, startups Algérie, écosystème tech algérien, freelancers Algeria, incubators Algeria, coworking Algeria, tech map"
     />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="The Algeria TechMap" />
+    <meta property="og:site_name" content="The Algeria TechMap" />
+    <meta property="og:title" content="The Algeria TechMap — the living map of Algeria's tech ecosystem" />
     <meta
       property="og:description"
-      content="A live map of Algeria's tech ecosystem — startups, companies, incubators, coworking spaces, events and hosting providers."
+      content="An interactive map of Algeria's tech ecosystem — startups, companies, freelancers, incubators, coworking spaces, events and hosting providers."
     />
     <meta property="og:url" content="https://the-algeria-tech-map.vercel.app/" />
     <meta property="og:image" content="https://the-algeria-tech-map.vercel.app/og-image.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="The Algeria TechMap" />
+    <meta name="twitter:title" content="The Algeria TechMap — the living map of Algeria's tech ecosystem" />
     <meta
       name="twitter:description"
-      content="A live map of Algeria's tech ecosystem — startups, companies, incubators, coworking spaces, events and hosting providers."
+      content="An interactive map of Algeria's tech ecosystem — startups, companies, freelancers, incubators, coworking spaces, events and hosting providers."
     />
     <meta name="twitter:image" content="https://the-algeria-tech-map.vercel.app/og-image.png" />
 
-    <title>The Algeria TechMap</title>
+    <title>The Algeria TechMap — Startups, Companies & Freelancers in Algeria</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "The Algeria TechMap",
+        "url": "https://the-algeria-tech-map.vercel.app/",
+        "description": "An interactive, open-source map of Algeria's tech ecosystem — startups, companies, freelancers, incubators, coworking spaces, events and hosting providers.",
+        "inLanguage": "en",
+        "about": {
+          "@type": "Country",
+          "name": "Algeria"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Crawlable fallback content: a SPA serves near-empty HTML, so this gives
+         search engines (and no-JS visitors) real text and a link to the full
+         text directory. -->
+    <noscript>
+      <div style="max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem; font-family: system-ui, sans-serif;">
+        <h1>The Algeria TechMap</h1>
+        <p>
+          The living map of Algeria's tech ecosystem — startups, companies, freelancers,
+          incubators, coworking spaces, events and hosting providers across every wilaya
+          of Algeria. Built to help the ecosystem collaborate, help investors find
+          opportunities, and help students find internships.
+        </p>
+        <p>
+          This interactive map needs JavaScript. Browse the full listing instead:
+          <a href="/directory.html">The Algeria TechMap directory</a>.
+        </p>
+      </div>
+    </noscript>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
