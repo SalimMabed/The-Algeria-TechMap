@@ -16,6 +16,9 @@ export function SubmissionForm({
   const [description, setDescription] = useState('')
   const [website, setWebsite] = useState('')
   const [email, setEmail] = useState('')
+  // Honeypot: invisible to humans, bots fill it in. Sent along so the
+  // API can silently drop automated submissions.
+  const [company, setCompany] = useState('')
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -26,7 +29,7 @@ export function SubmissionForm({
       const res = await fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type, name, location, sector, description, website, email }),
+        body: JSON.stringify({ type, name, location, sector, description, website, email, company }),
       })
       if (!res.ok) throw new Error('request failed')
       setStatus('sent')
@@ -155,6 +158,26 @@ export function SubmissionForm({
                   className="rounded-lg border border-neutral-200 px-3 py-2 text-[14px] text-neutral-900 focus:border-neutral-400 focus:outline-none"
                 />
               </label>
+
+              {/* Honeypot — hidden from real users, catches naive bots */}
+              <div className="absolute left-[-9999px] top-[-9999px]" aria-hidden="true">
+                <label>
+                  Company
+                  <input
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
+                  />
+                </label>
+              </div>
+
+              <p className="text-[11px] leading-snug text-neutral-400">
+                Submissions are reviewed publicly as GitHub issues on the project's
+                open-source repository — the details you enter here, including your
+                contact email, will be publicly visible.
+              </p>
 
               {status === 'error' && (
                 <p className="text-[12px] text-red-600">
