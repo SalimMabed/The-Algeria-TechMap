@@ -4,6 +4,7 @@ import { SubmissionForm } from './SubmissionForm'
 const ITEMS = [
   { label: 'Add Startup', type: 'Startup' },
   { label: 'Add Company', type: 'Company' },
+  { label: 'Add Freelancer', type: 'Freelancer' },
   { label: 'Add Event', type: 'Event' },
   { label: 'Add Incubator', type: 'Incubator' },
   { label: 'Add Hosting Provider', type: 'Hosting Provider' },

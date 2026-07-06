@@ -459,6 +459,34 @@ export const ENTITIES: Entity[] = [
     founded: 2018,
   },
 
+  // Freelancers
+  {
+    id: 'freelancer-amine-dev',
+    name: 'Amine K. — Full-Stack Developer',
+    category: 'freelancer',
+    wilaya: 'Algiers',
+    city: 'Algiers',
+    lat: 36.755,
+    lng: 3.035,
+    sector: 'Web Development',
+    description:
+      'Freelance full-stack developer building web apps for local businesses — React, Node.js and everything in between.',
+    founded: 2021,
+  },
+  {
+    id: 'freelancer-lina-design',
+    name: 'Lina B. — Product Designer',
+    category: 'freelancer',
+    wilaya: 'Oran',
+    city: 'Oran',
+    lat: 35.702,
+    lng: -0.645,
+    sector: 'UI/UX Design',
+    description:
+      'Independent product designer helping startups turn ideas into clean, usable interfaces.',
+    founded: 2022,
+  },
+
   // Hosting providers
   {
     id: 'dzhost',

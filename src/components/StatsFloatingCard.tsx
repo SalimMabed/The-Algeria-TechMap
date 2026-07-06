@@ -3,6 +3,7 @@ import type { Entity } from '../types'
 const ROWS: { category: Entity['category']; label: string }[] = [
   { category: 'startup', label: 'Startups' },
   { category: 'company', label: 'Companies' },
+  { category: 'freelancer', label: 'Freelancers' },
   { category: 'event', label: 'Events' },
   { category: 'incubator', label: 'Incubators' },
   { category: 'hosting', label: 'Hosting Providers' },

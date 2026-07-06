@@ -5,6 +5,7 @@ export type Category =
   | 'coworking'
   | 'event'
   | 'hosting'
+  | 'freelancer'
 
 export interface Entity {
   id: string
@@ -27,6 +28,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   coworking: 'Coworking Space',
   event: 'Event',
   hosting: 'Hosting Provider',
+  freelancer: 'Freelancer',
 }
 
 export const CATEGORY_LABELS_PLURAL: Record<Category, string> = {
@@ -36,6 +38,7 @@ export const CATEGORY_LABELS_PLURAL: Record<Category, string> = {
   coworking: 'Coworking',
   event: 'Events',
   hosting: 'Hosting',
+  freelancer: 'Freelancers',
 }
 
 export const CATEGORY_COLORS: Record<Category, string> = {
@@ -45,4 +48,5 @@ export const CATEGORY_COLORS: Record<Category, string> = {
   event: '#f97316',
   hosting: '#ef4444',
   coworking: '#eab308',
+  freelancer: '#ec4899',
 }

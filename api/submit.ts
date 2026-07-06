@@ -27,6 +27,7 @@ function isRateLimited(ip: string): boolean {
 const ALLOWED_TYPES = new Set([
   'Startup',
   'Company',
+  'Freelancer',
   'Incubator',
   'Coworking Space',
   'Event',

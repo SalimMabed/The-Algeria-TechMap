@@ -1,6 +1,14 @@
 import { useState, type FormEvent } from 'react'
 
-const TYPE_OPTIONS = ['Startup', 'Company', 'Incubator', 'Coworking Space', 'Event', 'Hosting Provider']
+const TYPE_OPTIONS = [
+  'Startup',
+  'Company',
+  'Freelancer',
+  'Incubator',
+  'Coworking Space',
+  'Event',
+  'Hosting Provider',
+]
 
 export function SubmissionForm({
   initialType,

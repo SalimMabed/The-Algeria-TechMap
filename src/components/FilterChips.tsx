@@ -3,7 +3,7 @@ import { CATEGORY_LABELS_PLURAL } from '../types'
 
 export type Filter = { type: 'category'; value: Category } | { type: 'sector'; value: string } | null
 
-const CATEGORY_CHIPS: Category[] = ['startup', 'company', 'incubator', 'coworking', 'event', 'hosting']
+const CATEGORY_CHIPS: Category[] = ['startup', 'company', 'freelancer', 'incubator', 'coworking', 'event', 'hosting']
 
 export function FilterChips({
   filter,
